@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FLOOM - Flower Shop</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+    header {
+      background-color: maroon;
+      text-align: center;
+      color: white;
+      padding: 20px 0;
+    }
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 5px;
+    }
+    .separator {
+      border-top: 1px solid white;
+      margin: 10px auto;
+      width: 80%;
+    }
+    .section {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .images-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .image-container {
+      text-align: center;
+    }
+    footer {
+      background-color: maroon;
+      text-align: center;
+      color: white;
+      padding: 20px 0;
+    }
+    .left-flower,
+    .right-flower {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h2 {
+      margin: 0 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Animation styles */
+    .highlighted {
+      transform: scale(1.2);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FLOOM</h1>
+    <p>Flower Shop</p>
+    <div class="separator"></div>
+  </header>
+
+  <div class="section">
+    <img src="leftflower.svg" alt="Corner Left SVG" width="100" height="100" />
+    <h2>WELCOME TO FLOOM!</h2>
+    <img src="rightflower.svg" alt="Corner Right SVG" width="100" height="100" />
+  </div>
+
+  <div class="section">
+    <div class="image-container">
+      <img src="cornerleft.svg" alt="Left Flower SVG" class="left-flower" width="150" height="150" />
+    <p>Unveiling nature's elegance, one petal at a time, presenting the exquisite world of floras:</p>
+     <p>Rose: "Symbol of love through thorns and beauty"</p>
+     <p>Tulip: "Once worth more than gold in 17th-century holland</p>
+     <p>Sunflower: "Turns heads to chase the sun's daily journey</p>
+     <p>Daisy: "Simple yet timeless, radiates innocence</p>
+     <p>Dahlia: "Intricate petals, diverse in size and color</p>
+     <p>Marigold: "A vibrant guardian, believed to bring luck"</p>
+     <img src="cornerright.svg" alt="Right Flower SVG" class="right-flower" width="150" height="150" />
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="images-row">
+      <div class="image-container">
+        <img src="rose.svg" alt="Rose SVG" width="150" height="150" />
+        <p>ROSE</p>
+      </div>
+      <div class="image-container">
+        <img src="tulip.svg" alt="Tulip SVG" width="150" height="150" />
+        <p>TULIP</p>
+      </div>
+      <div class="image-container">
+        <img src="sunflower.svg" alt="Sunflower SVG" width="150" height="150" />
+        <p>SUNFLOWER</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="images-row">
+      <div class="image-container">
+        <img src="daisy.svg" alt="Daisy SVG" width="150" height="150" />
+        <p>DAISY</p>
+      </div>
+      <div class="image-container">
+        <img src="dahlia.svg" alt="Dahlia SVG" width="150" height="150" />
+        <p>DAHLIA</p>
+      </div>
+      <div class="image-container">
+        <img src="marigold.svg" alt="Marigold SVG" width="150" height="150" />
+        <p>MARIGOLD</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Floom. All Rights Reserved. 2024.
+  </footer>
+
+  <script>
+    // Get all flower images
+    const flowers = document.querySelectorAll('.image-container img');
+
+    // Loop through each flower and add a click event listener
+    flowers.forEach(flower => {
+      flower.addEventListener('click', () => {
+        // Toggle the 'highlighted' class on click
+        flower.classList.toggle('highlighted');
+      });
+    });
+  </script>
+
+</body>
+</html>
